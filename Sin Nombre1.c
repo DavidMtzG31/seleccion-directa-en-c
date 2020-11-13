@@ -2,15 +2,17 @@
 
 int main(){
 	
-	int numeros[] = {1,0,2,20,30,50};
-	int i,j,aux,min;
+	int numeros[] = {69, 49, 59, 50, 96, 10, 36, 51};
+	int i , j, aux, min, comp;
 	
-	//Algoritmo del Ordenamiento por Selección
-	for(i=0;i<6;i++){
+	
+	for(i=0;i<8;i++){        //j<n  donde n sería el número de elementos
 		min = i;
-		for(j=i+1;j<6;j++){
+		for(j=i+1 ; j<8 ; j++){   //j<n  donde n sería el número de elementos
+		    comp ++;
 			if(numeros[j] < numeros[min]){
 				min = j;
+				
 			}
 		}
 		aux = numeros[i];
@@ -18,14 +20,16 @@ int main(){
 		numeros[min] = aux;
 	}
 	
-	
-printf("Orden ascendente");
-	for(i=0;i<=5;i++){
+
+	for(i=0;i<=7;i++){   //i<n-1  donde n sería el número de elementos
 		
-		printf("%d"), numeros[i];
+		printf("%d ", numeros[i]);
+		
 	
 	}
 	
+    printf("\n\n");
+    printf("Comparaciones %i\n\n", comp);
     
     return 0;
     }
